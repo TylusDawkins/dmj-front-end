@@ -1,0 +1,61 @@
+
+
+
+
+
+
+
+.homepage-navbar{
+    
+    height: 9%;
+    padding:2%;
+    /*background-image:radial-gradient(bisque,linen);*/
+    background-image:radial-gradient(rgb(155, 201, 238), rgb(251, 245, 240));
+}
+
+.content-border{
+    
+    border:solid white;
+    border-radius: 3em;
+    border-left-style: unset;
+    border-right-style: unset;
+}
+
+.homepage-navbar-content{
+   
+    display:flex;
+    border-radius: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    height:3%;
+    justify-content: space-evenly;
+    color: #afa376;
+    font-size: 1.4em;
+    border-top: solid whites;
+    border-bottom: solid 1px #32859b;
+    margin: 1em;
+    background-color: white;
+    
+}
+
+
+
+ .logo{
+    border-bottom: .1em solid #32859b;
+    
+  
+ }
+
+ 
+
+
+
+ .homepage-body{
+    height: 100em;
+    width: 100%;
+    background-image:url('../images/white-fluffy-cloud.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+ }
