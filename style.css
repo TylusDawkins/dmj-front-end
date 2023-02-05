@@ -1,9 +1,15 @@
+:root {
+    display: flex;
+    height: 100%;
+}
 
+body {
+    flex-grow: 1;
+}
 
-
-
-
-
+main {
+    height: 100%;
+}
 
 .homepage-navbar{
     
@@ -37,21 +43,13 @@
     
 }
 
-
-
- .logo{
+.logo{
     border-bottom: .1em solid #32859b;
     
   
  }
 
- 
-
-
-
  .homepage-body{
-    height: 120em;
-    width: 100%;
     background-image:url('../images/white-fluffy-cloud.jpg');
     background-attachment: fixed;
     background-position: center;
