@@ -12,7 +12,7 @@
     /* background-image:radial-gradient(bisque,linen); 
     background-image:radial-gradient(rgb(155, 201, 238), rgb(251, 245, 240));*/
     /*background-image:radial-gradient(rgb(166, 180, 221), rgb(251, 245, 240));*/
-    background-image:radial-gradient(rgb(78, 179, 204), rgb(251, 245, 240));
+    background-image:radial-gradient(rgb(62, 161, 185), rgb(251, 245, 240));
 }
 
 .content-border{
@@ -51,7 +51,7 @@
  .homepage-background{
     height: 200em;
     width: 100%;
-    background-image:url('../images/white-swirl-2400px.jpg');
+    background-image:url('../images/swirl-lite-4k.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
