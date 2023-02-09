@@ -49,7 +49,7 @@
 
 
 
- .homepage-body{
+ .homepage-background{
     height: 120em;
     width: 100%;
     background-image:url('../images/white-fluffy-cloud.jpg');
@@ -61,6 +61,8 @@
  }
 
  .explanation-section{
+    display: flex;
+    align: center;
     text-align: center;
     height: 8em;
     width: 50em;

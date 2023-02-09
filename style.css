@@ -7,10 +7,12 @@
 
 .homepage-navbar{
     
-    height: 9%;
+    height: 9em;
     padding:2%;
-    /* background-image:radial-gradient(bisque,linen); */
-    background-image:radial-gradient(rgb(155, 201, 238), rgb(251, 245, 240));
+    /* background-image:radial-gradient(bisque,linen); 
+    background-image:radial-gradient(rgb(155, 201, 238), rgb(251, 245, 240));*/
+    /*background-image:radial-gradient(rgb(166, 180, 221), rgb(251, 245, 240));*/
+    background-image:radial-gradient(rgb(78, 179, 204), rgb(251, 245, 240));
 }
 
 .content-border{
@@ -28,31 +30,28 @@
     font-family: Arial, Helvetica, sans-serif;
     height:3%;
     justify-content: space-evenly;
-    color: #afa376;
+    /*color: #1a52eb;*/
+    color:#063b48;
     font-size: 1.4em;
     border-top: solid whites;
     border-bottom: solid 1px #32859b;
     margin: 1em;
     background-color: white;
-    
+    opacity: .7;
 }
 
 
 
  .logo{
     border-bottom: .1em solid #32859b;
-    
   
  }
 
  
-
-
-
- .homepage-body{
-    height: 120em;
+ .homepage-background{
+    height: 200em;
     width: 100%;
-    background-image:url('../images/white-fluffy-cloud.jpg');
+    background-image:url('../images/white-swirl-2400px.jpg');
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -60,13 +59,27 @@
 
  }
 
- .explanation-section{
-    text-align: center;
-    height: 8em;
-    width: 50em;
-    border: 1px solid black;
 
+ 
+ .explanation-section{
+    
+    margin:auto;
+    height: 8em;
+    width: 50%;
+    text-align: center;
+
+    border: 1px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    padding: 2.2%;
+    opacity: .7;
+    border-radius: 15%;
+    margin-top:3em;
  }
+
+
+
+
 
  .pick-design{
 
@@ -79,4 +92,11 @@
 
  .we-make-it{
     
+ }
+
+ .homepage-designBoard{
+    width:30em; 
+    height:30em;
+    margin:auto;
+    margin-top: 6em;
  }
