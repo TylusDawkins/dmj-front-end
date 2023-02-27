@@ -1,127 +1,129 @@
 import React, { useState } from 'react'
 
+
 import './test_board.css'
 
+//Size images
 import sixteenButton from '../../images/16-inch-btn.png'
 import eighteenButton from '../../images/18-inch-btn.png'
 import twentyButton from '../../images/20-inch-btn.png'
 import twentyFourButton from '../../images/24-inch-btn.png'
 
-import lightSkin from '../../images/skin_color_lite.png'
-import tanSkin from '../../images/skin_color_tan.png'
-import darkSkin from '../../images/skin_color_dark.png'
-
+//Chain color images
 import metalRingGM from '../../images/metal-ring-GM.png'
 import metalRingAG from '../../images/metal-ring-AG.png'
 import metalRingS from '../../images/metal-ring-S.png'
 import metalRingAS from '../../images/metal-ring-AS.png'
 import metalRingG from '../../images/metal-ring-G.png'
 
+//Mannequin images
 import originalMannequin from '../../images/original mannequin (1).jpg'
+import fairMannequin from '../../images/manqs/Fair.png'
+import tanMannequin from '../../images/manqs/tan.png'
+import darkMannequin from '../../images/manqs/warm-deep.png'
 
-import chain from '../../images/chain.png'
+//Mannequin color images
+import lightSkin from '../../images/skin_color_lite.png'
+import tanSkin from '../../images/skin_color_tan.png'
+import darkSkin from '../../images/skin_color_dark.png'
+
+//Chain images
+import silverChain from '../../images/chains/baseChain20_S.png'
+import goldChain from '../../images/chains/baseChain20_G.png'
+import brownChain from '../../images/chains/baseChain20_AG.png'
+import greyChain from '../../images/chains/baseChain20_AS.png'
+import blackChain from '../../images/chains/baseChain20_GM.png'
+
+//beads 
+import beads from '../../images/beads/beads.js'
 
 export default function TestBoard () {
 
-    const [mannequin, setMannequin] = useState(originalMannequin)
+   const [chain , setChain] = useState(goldChain)
 
-    const changeMannequin = (e) => {
-        console.log(e.target.src)
-        setMannequin(e.target.src)
+   const [mannequin, setMannequin] = useState(originalMannequin)
+
+   let anchors = [
+    <img src={beads[0].image} alt={'bead'} className='anchor'/>,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null]
+
+   const [anchorsState, setAnchorsState] = useState([])
+
+   const changeBead = (bead, index) => {
+        console.log(bead)
+        console.log(index) 
+        anchors[index] = bead
+        setAnchorsState(anchors)
+        console.log(anchorsState)
     }
 
-    // const externalHtml = 
+   const changeChain = (chain) => {
+       console.log(chain)
+       setChain(chain)
+   }
 
-    return(
-        <div>
-            <div class="main">
-                <div class="text">
-                    <h3>Length<span style={{margin: "-4px 8px 0 1px;"}}>.</span> coming soon</h3>
-                    <h3>Select your metal color</h3>
-                    <h3>Skin colors<span style={{margin: "-4px 8px 0 1px;"}}>.</span> coming soon</h3>
-                </div>
-                <div class="line"></div>
-                <div class="ring-circle-box">
-                    <div class="txt-box">
-                        <img src={sixteenButton} alt="Number"/>
-                        <img src={eighteenButton} alt="Number"/>
-                        <img src={twentyButton} alt="Number"/>
-                        <img src={twentyFourButton} alt="Number"/>
-                    </div>
-                    <div class="ring-box">
-                        <img src={metalRingGM} alt="ring"/>
-                        <img src={metalRingAG} alt="ring"/>
-                        <img src={metalRingS} alt="ring"/>
-                        <img src={metalRingAS} alt="ring"/>
-                        <img src={metalRingG} alt="ring"/>
-                    </div>
-                    <div class="circle-box">
-                        <img src={lightSkin} alt="circle" onClick={changeMannequin}/>
-                        <img src={tanSkin} alt="circle" onClick={changeMannequin}/>
-                        <img src={darkSkin} alt="circle" onClick={changeMannequin}/>
-                    </div>
-                </div>
-                <div class="body-center">
-                    <div class="left">
-                        <div class="lft-img">
-                            
-                        </div>
-                    </div>
-                    <div class="middle">
-                        <img src={mannequin} alt="Jewelry"/>
-                        <div id="chainContainer"><img id="chain" src={chain} alt="chain"/> </div>
-                    </div>
-                    <div class="right">
-                        <div class="rgt-img">
-                            
-                        </div>
-                    </div>
-                </div>
-                </div>
-                {/* <div class="mobile">
-                <div class="mring-circle-box">
-                    <div class="txt-box-cont">
-                        <h3>Length<span style={{margin: "-4px 8px 0 1px;"}}>.</span> coming soon</h3>
-                        <div class="line"></div>
-                        <div class="txt-box">
-                            <img src={sixteenButton} alt="Number"/>
-                            <img src={eighteenButton}alt="Number"/>
-                            <img src="../../images/20-inch-btn.png" alt="Number"/>
-                            <img src="../../images/24-inch-btn.png" alt="Number"/>
-                        </div>
-                    </div>
-                    <div class="ring-box-cont">
-                        <h3>Select your metal cuiul</h3>
-                        <div class="line"></div>
-                        <div class="ring-box">
-                            <img src="../../images/metal-ring-GM.png" alt="ring"/>
-                            <img src="../../images/metal-ring-AG.png" alt="ring"/>
-                            <img src="../../images/metal-ring-S.png" alt="ring"/>
-                            <img src="../../images/metal-ring-AS.png" alt="ring"/>
-                            <img src="../../images/metal-ring-G.png" alt="ring"/>
-                        </div>
-                    </div>
-                    <div class="circle-box-cont">
-                        <h3>Skin colors<span style={{margin: "-4px 8px 0 1px;"}}>.</span> coming soon</h3>
-                        <div class="line"></div>
-                        <div class="circle-box">
-                            <img src="../../images/skin_color_lite.png" alt="circle"/>
-                            <img src="../../images/skin_color_tan.png" alt="circle"/>
-                            <img src="../../images/skin_color_dark.png" alt="circle"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="mmiddle">
-                    <img src="../../images/original mannequin (1).jpg" alt="Jewelry"/>
-                    <div id="chainContainer"><img id="chain" src="../../images/chain.png" alt="chain"/></div>
-                </div>
-                <div class="body-center">
-                    <div class="left">
-                    </div>
-                    <div class="right">
-                    </div>
-                </div>
-            </div> */}
-        </div>
-    )
+   const changeMannequin = (image) => {
+       console.log(image)
+       setMannequin(image)
+   }
+
+   return(
+       <div>
+           <div className="main">
+               <div className="selection-fields">
+                   <div className='top-bottom'>
+                       <h1>Select a chain length</h1>
+                       <div className="txt-box">
+                           <img src={sixteenButton} className='selectable' alt="Number"/>
+                           <img src={eighteenButton} className='selectable' alt="Number"/>
+                           <img src={twentyButton} className='selectable' alt="Number"/>
+                           <img src={twentyFourButton} className='selectable' alt="Number"/>
+                       </div>
+                   </div>
+                       <div className='top-bottom'>
+                           <h1>Select your metal color</h1>
+                           <div className="ring-box">
+                               <img src={metalRingGM} className='selectable' onClick={()=>{changeChain(goldChain)}} alt="ring"/>
+                               <img src={metalRingAG} className='selectable' onClick={()=>{changeChain(brownChain)}} alt="ring"/>
+                               <img src={metalRingS} className='selectable' onClick={()=>{changeChain(silverChain)}} alt="ring"/>
+                               <img src={metalRingAS} className='selectable' onClick={()=>{changeChain(greyChain)}}alt="ring"/>
+                               <img src={metalRingG} className='selectable' onClick={()=>{changeChain(blackChain)}} alt="ring"/>
+                           </div>
+                       </div>
+                       <div className='top-bottom'>
+                           <h1>Select a skin color</h1>
+                           <div className="circle-box">
+                               <img src={lightSkin} className='selectable' alt="circle" onClick={()=>{changeMannequin(fairMannequin)}}/>
+                               <img src={tanSkin} className='selectable' alt="circle" onClick={()=>{changeMannequin(tanMannequin)}}/>
+                               <img src={darkSkin} className='selectable' alt="circle" onClick={()=>{changeMannequin(darkMannequin)}}/>
+                           </div>
+                       </div>
+               </div>
+               <div className="line"></div>
+               <div className="design-board">
+                   <div className="left">
+                    {beads.map((bead, index) => {
+                        return <img src={bead.image} key={index} className='bead' alt="Jewelry"/>
+                    })}
+                   </div>
+                   <div className="middle">
+                        {anchorsState.map((anchor, index) => {
+                            return <div key={index} className='bead' alt="Jewelry"></div>
+                        })}
+                         <img src={mannequin} id='mannequin' className='img' alt="Jewelry"/>
+                         <img src={chain}  id="chain" className='img' alt="chain"/>
+                   </div>
+                   <div className="right">
+
+                   </div>
+               </div>
+               </div>
+       </div>
+   )
 }
+
